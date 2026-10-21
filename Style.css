@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+  }
+
+body {
+margin: 0;
+background: #101010;
+color: #f2f2f2;
+font-family: Arial, sans-serif;
+}
+
+header {
+padding: 28px 20px 22px;
+background: #181818;
+border-bottom: 1px solid #d4a72c;
+}
+
+header h1 {
+margin: 0 0 8px;
+color: #f0c348;
+font-size: 28px;
+}
+
+header p {
+margin: 0;
+color: #aaa;
+font-size: 14px;
+}
+
+nav {
+display: flex;
+gap: 10px;
+padding: 14px;
+background: #181818;
+}
+
+button {
+border: 1px solid #444;
+border-radius: 10px;
+padding: 13px 18px;
+background: #242424;
+color: #eee;
+font-size: 15px;
+cursor: pointer;
+}
+
+nav button {
+flex: 1;
+}
+
+nav button.active {
+background: #f0c348;
+border-color: #f0c348;
+color: #111;
+font-weight: bold;
+}
+
+main {
+max-width: 700px;
+margin: auto;
+padding: 18px;
+}
+
+.page {
+padding: 20px;
+background: #191919;
+border: 1px solid #333;
+border-radius: 14px;
+}
+
+.page h2 {
+margin-top: 0;
+color: #f0c348;
+}
+
+.page h3 {
+margin-top: 26px;
+}
+
+textarea {
+display: block;
+width: 100%;
+min-height: 180px;
+padding: 14px;
+resize: vertical;
+border: 1px solid #444;
+border-radius: 10px;
+background: #101010;
+color: white;
+font: inherit;
+font-size: 16px;
+line-height: 1.5;
+}
+
+input[type="file"] {
+display: block;
+width: 100%;
+margin: 18px 0;
+padding: 12px;
+border: 1px dashed #666;
+border-radius: 10px;
+background: #101010;
+color: #ddd;
+}
+
+.primary {
+width: 100%;
+margin-top: 12px;
+background: #f0c348;
+border-color: #f0c348;
+color: #111;
+font-weight: bold;
+}
+
+button:active {
+opacity: 0.75;
+}
+
+#textStatus,
+#fileStatus {
+color: #f0c348;
+font-size: 14px;
+}
+
+#savedText {
+overflow-wrap: anywhere;
+white-space: pre-wrap;
+line-height: 1.6;
+}
+
+#savedFiles {
+display: grid;
+grid-template-columns: 1fr;
+gap: 14px;
+margin-top: 20px;
+}
+
+#savedFiles img,
+#savedFiles video {
+display: block;
+width: 100%;
+max-height: 350px;
+border-radius: 10px;
+background: #000;
+object-fit: contain;
+}
+
+.hidden {
+display: none;
+}
+
+@media (min-width: 550px) {
+main {
+padding: 28px;
+}
+
+#savedFiles {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+}
