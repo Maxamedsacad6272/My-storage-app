@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Storage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>My Storage</h1>
+    <p>Your personal text and file space</p>
+  </header>
+
+  <nav>
+    <button class="active" onclick="showPage('text', this)">Text</button>
+    <button onclick="showPage('files', this)">Files</button>
+  </nav>
+
+  <main>
+    <section id="text" class="page">
+      <h2>Save text</h2>
+      <textarea id="textInput" placeholder="Write or paste your text here..."></textarea>
+      <button class="primary" onclick="saveText()">Save text</button>
+      <p id="textStatus"></p>
+      <h3>Saved text</h3>
+      <div id="savedText">Nothing saved yet.</div>
+    </section>
+
+    <section id="files" class="page hidden">
+      <h2>Save files</h2>
+      <input type="file" id="fileInput" accept="image/*,video/*" multiple>
+      <button class="primary" onclick="saveFiles()">Save selected files</button>
+      <p id="fileStatus"></p>
+      <div id="savedFiles"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
